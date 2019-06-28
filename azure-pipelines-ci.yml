@@ -94,7 +94,7 @@ jobs:
   
   - script: | 
       . venv/bin/activate
-      pytest --timeout=9 --durations=10 -qq -o console_output_style=count -p no:sugar --cov --cov-report= tests
+      pytest --timeout=9 --durations=10 -qq -o console_output_style=count -p no:sugar --cov homeassistant --cov-report=html tests
     displayName: 'Run pytest for python $(python.version)'
 
 - job: 'FullCheck'
